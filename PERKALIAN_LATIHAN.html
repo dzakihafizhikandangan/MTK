@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LATIHAN</title>
+    <style>
+        .header{
+            background-color: #FFB200;
+            width: 100%;
+            height: 150px;
+        }
+        .footer{
+            background-color: #FFB200;
+            width: 100%;
+            height: 150px;
+        }
+        .body{
+            background-color: #277bc0;
+            width: 100%;
+            height: 1300px;
+        }
+        .soal{
+            font-size: 25px;
+            color: #FFB200;
+        }
+        .pilgan{
+            font-size: 25px;
+            color: #FFB200;
+        }
+		#submit{
+            font-size: 25px;
+			width: 250px;
+			border-radius: 20px;
+			background-color: #FFB200;
+            color: white;
+			cursor:pointer;
+        }
+		.kembali{
+            font-size: 25px;
+            color: #FFB200;
+        }
+		.konten_hasil {
+    		background-color: #277bc0;
+    		margin: 15% auto; 
+    		padding: 20px;
+			border-radius: 20px;
+    		border: 5px solid #FFB200;
+    		width: 30%; 
+		}
+		.mdl_hasil {
+    		display: none; 
+    		position: fixed; 
+    		z-index: 1; 
+    		left: 0;
+    		top: 0;
+    		width: 100%; 
+    		height: 100%; 
+    		overflow: auto; 
+    		background-color: rgb(0, 0, 0); 
+    		background-color: rgba(0, 0, 0, 0.4); 
+		}
+		.inputkonten_hasil {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+    </style>
+</head>
+<body>
+    <div class="body">
+        <div class="header"></div>
+        <center><span style="color:#FFB200;"><h2>SOAL LATIHAN</h2></span></center>
+        <p class="soal">1. 2,5 X 4 = ...</p>
+        <div class="pilgan">
+        <form>
+			<input type="radio" name="n1" onclick="benar1()">
+			<label for="A1">A. 10</label><br>
+			<input type="radio" name="n1">
+			<label for="B1">B. 13,7</label><br>
+			<input type="radio" name="n1">
+			<label for="C1">C. 12,51</label><br>
+			<input type="radio" name="n1">
+			<label for="D1">D. 15,5</label><br>
+		</form>
+        </div>
+        <p class="soal">2. 13,7 X 3 = ...</p>
+        <div class="pilgan">
+        <form>
+			<input type="radio" name="n2">
+			<label for="A2">A. 411,25</label><br>
+			<input type="radio" name="n2">
+			<label for="B2">B. 213,7</label><br>
+			<input type="radio" name="n2">
+			<label for="C2">C. 121,51</label><br>
+			<input type="radio" name="n2" onclick="benar2()">
+			<label for="D2">D. 41,1</label><br>
+		</form>
+        </div>
+        <p class="soal">3. 4,7 X 7 = ...</p>
+        <div class="pilgan">
+        <form>
+			<input type="radio" name="n3">
+			<label for="A3">A. 95,5</label><br>
+			<input type="radio" name="n3" onclick="benar3()">
+			<label for="B3">B. 32,9</label><br>
+			<input type="radio" name="n3">
+			<label for="C3">C. 79,47</label><br>
+			<input type="radio" name="n3">
+			<label for="D3">D. 84,75</label><br>
+		</form>
+        </div>
+        <p class="soal">4. 50,5 X 2 = ...</p>
+        <div class="pilgan">
+        <form>
+			<input type="radio" name="n4">
+			<label for="A4">A. 1049,31</label><br>
+			<input type="radio" name="n4" onclick="benar4()">
+			<label for="B4">B. 101</label><br>
+			<input type="radio" name="n4">
+			<label for="C4">C. 4279,47</label><br>
+			<input type="radio" name="n4">
+			<label for="D4">D. 8412,75</label><br>
+		</form>
+        </div>
+        <p class="soal">5. 8,5 X 3 = ...</p>
+        <div class="pilgan">
+        <form>
+			<input type="radio" name="n5">
+			<label for="A5">A. 1049,31</label><br>
+			<input type="radio" name="n5">
+			<label for="B5">B. 2550,25</label><br>
+			<input type="radio" name="n5" onclick="benar5()">
+			<label for="C5">C. 25,5</label><br>
+			<input type="radio" name="n5">
+			<label for="D5">D. 8412,75</label><br>
+		</form>
+        </div>
+		<center><p id="submit">Submit</p></center>
+		<center><a href="PERKALIAN_MATERI1.html"><p class="kembali">Kembali</p></a></center>
+    </div>
+    <div class="footer"></div>
+
+	<div id="kntn_hasil" class="mdl_hasil">
+		<div class="konten_hasil">
+			<div class="inputkonten_hasil">
+				<span style="color:#FFB200;"><h3>SKOR ANDA</h3></span>
+				<span style="color:#FFB200;"><h3 id="nilai_hasil"></h3></span>
+				<center><a href="PERKALIAN_MATERI1.html"><p class="kembali">Kembali</p></a></center>
+			</div>
+		</div>
+	</div>
+
+<script>
+	var soal = [];
+
+	function benar1(){
+		soal.push(1);
+	}
+	function benar2(){
+		soal.push(2);
+	}
+	function benar3(){
+		soal.push(3);
+	}
+	function benar4(){
+		soal.push(4);
+	}
+	function benar5(){
+		soal.push(5);
+	}
+</script>
+<script>
+	function hitung(){
+		var nilai_siswa=20*(soal.length);
+		console.log(nilai_siswa);
+
+		document.getElementById('nilai_hasil').innerHTML=nilai_siswa;
+		var addskor_hasil=document.getElementById("kntn_hasil");
+		var submit=document.getElementById("submit");
+		submit.onclick = function () {
+			addskor_hasil.style.display = "block";
+		};
+	}
+	document.getElementById("submit").addEventListener('click', hitung, true);
+</script>
+</body>
+</html>
