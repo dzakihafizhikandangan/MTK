@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EVALUASI</title>
+    <style>
+        .header{
+            background-color: #FFB200;
+            width: 100%;
+            height: 150px;
+        }
+        .footer{
+            background-color: #FFB200;
+            width: 100%;
+            height: 150px;
+        }
+        .body{
+            background-color: #277bc0;
+            width: 100%;
+            height: 2250px;
+        }
+        .soal{
+            font-size: 25px;
+            color: #FFB200;
+        }
+        .pilgan{
+            font-size: 25px;
+            color: #FFB200;
+        }
+		#submit{
+            font-size: 25px;
+			width: 250px;
+			border-radius: 20px;
+			background-color: #FFB200;
+            color: white;
+			cursor:pointer;
+        }
+		.kembali{
+            font-size: 25px;
+            color: #FFB200;
+        }
+		.konten {
+			background-color: #277bc0;
+			margin: 15% auto; 
+			padding: 20px;
+			border: 5px solid #FFB200;
+			border-radius: 20px;
+			width: 30%; 
+  		}
+		.inputkonten {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.mdl {
+			display: none; 
+			position: fixed; 
+			z-index: 1; 
+			left: 0;
+			top: 0;
+			width: 100%; 
+			height: 100%; 
+			overflow: auto; 
+			background-color: rgb(0, 0, 0); 
+			background-color: rgba(0, 0, 0, 0.4); 
+    	}
+		#sekolah {
+			width: 100%;
+		}
+		.button{
+			margin-top: 20px;
+			border-radius: 20px;
+			border: solid #FFB200 5px;
+			background-color: #FFB200;
+			color: white;
+			font-size: 25px;
+			cursor: pointer;
+		}
+		.konten_hasil {
+    		background-color: #277bc0;
+    		margin: 15% auto; 
+    		padding: 20px;
+			border-radius: 20px;
+    		border: 5px solid #FFB200;
+    		width: 30%; 
+		}
+		.mdl_hasil {
+    		display: none; 
+    		position: fixed; 
+    		z-index: 1; 
+    		left: 0;
+    		top: 0;
+    		width: 100%; 
+    		height: 100%; 
+    		overflow: auto; 
+    		background-color: rgb(0, 0, 0); 
+    		background-color: rgba(0, 0, 0, 0.4); 
+		}
+		.inputkonten_hasil {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+    </style>
+</head>
+<body>
+    <div class="body">
+        <div class="header"></div>
+        <center><span style="color:#FFB200;"><h2>SOAL EVALUASI</h2></span></center>
+        <p class="soal">1. 9,5 X 3 = ...</p>
+        <div class="pilgan">
+        <form>
+			<input type="radio" name="n1">
+			<label for="A1">A. 10</label><br>
+			<input type="radio" name="n1">
+			<label for="B1">B. 13,7</label><br>
+			<input type="radio" name="n1">
+			<label for="C1">C. 12,51</label><br>
+			<input type="radio" name="n1" onclick="benar1()">
+			<label for="D1">D. 28,5</label><br>
+		</form>
+        </div>
+        <p class="soal">2. 7,1 X 3 = ...</p>
+        <div class="pilgan">
+        <form>
+			<input type="radio" name="n2">
+			<label for="A2">A. 411,25</label><br>
+			<input type="radio" name="n2" onclick="benar2()">
+			<label for="B2">B. 21,3</label><br>
+			<input type="radio" name="n2">
+			<label for="C2">C. 121,51</label><br>
+			<input type="radio" name="n2">
+			<label for="D2">D. 41,1</label><br>
+		</form>
+        </div>
+        <p class="soal">3. 4,7 X 7 = ...</p>
+        <div class="pilgan">
+        <form>
+			<input type="radio" name="n3">
+			<label for="A3">A. 95,5</label><br>
+			<input type="radio" name="n3" onclick="benar3()">
+			<label for="B3">B. 32,9</label><br>
+			<input type="radio" name="n3">
+			<label for="C3">C. 79,47</label><br>
+			<input type="radio" name="n3">
+			<label for="D3">D. 84,75</label><br>
+		</form>
+        </div>
+        <p class="soal">4. 12,5 X 2 = ...</p>
+        <div class="pilgan">
+        <form>
+			<input type="radio" name="n4">
+			<label for="A4">A. 1049,31</label><br>
+			<input type="radio" name="n4">
+			<label for="B4">B. 101</label><br>
+			<input type="radio" name="n4">
+			<label for="C4">C. 4279,47</label><br>
+			<input type="radio" name="n4" onclick="benar4()">
+			<label for="D4">D. 25</label><br>
+		</form>
+        </div>
+        <p class="soal">5. 7,2 X 4 = ...</p>
+        <div class="pilgan">
+        <form>
+			<input type="radio" name="n5" onclick="benar5()">
+			<label for="A5">A. 28,8</label><br>
+			<input type="radio" name="n5">
+			<label for="B5">B. 2550,25</label><br>
+			<input type="radio" name="n5">
+			<label for="C5">C. 25,5</label><br>
+			<input type="radio" name="n5">
+			<label for="D5">D. 8412,75</label><br>
+		</form>
+        </div>
+        <p class="soal">6. 8,5 / 2 = ...</p>
+        <div class="pilgan">
+        <form>
+			<input type="radio" name="n6">
+			<label for="A6">A. 11,25</label><br>
+			<input type="radio" name="n6" onclick="benar6()">
+			<label for="B6">B. 4,25</label><br>
+			<input type="radio" name="n6">
+			<label for="C6">C. 12,51</label><br>
+			<input type="radio" name="n6">
+			<label for="D6">D. 15,5</label><br>
+		</form>
+        </div>
+        <p class="soal">7. 4,2 / 2 = ...</p>
+        <div class="pilgan">
+        <form>
+			<input type="radio" name="n7" onclick="benar7()">
+			<label for="A7">A. 2,1</label><br>
+			<input type="radio" name="n7">
+			<label for="B7">B. 213,7</label><br>
+			<input type="radio" name="n7">
+			<label for="C7">C. 121,51</label><br>
+			<input type="radio" name="n7">
+			<label for="D7">D. 2,7</label><br>
+		</form>
+        </div>
+        <p class="soal">8. 6,3 / 3 = ...</p>
+        <div class="pilgan">
+        <form>
+			<input type="radio" name="n8">
+			<label for="A8">A. 95,5</label><br>
+			<input type="radio" name="n8" onclick="benar8()">
+			<label for="B8">B. 2,1</label><br>
+			<input type="radio" name="n8">
+			<label for="C8">C. 79,47</label><br>
+			<input type="radio" name="n8">
+			<label for="D8">D. 84,75</label><br>
+		</form>
+        </div>
+        <p class="soal">9. 12,2 / 6 = ...</p>
+        <div class="pilgan">
+        <form>
+			<input type="radio" name="n9">
+			<label for="A9">A. 95,5</label><br>
+			<input type="radio" name="n9">
+			<label for="B9">B. 4,2</label><br>
+			<input type="radio" name="n9" onclick="benar9()">
+			<label for="C9">C. 6,1</label><br>
+			<input type="radio" name="n9">
+			<label for="D9">D. 84,75</label><br>
+		</form>
+        </div>
+        <p class="soal">10. 8,2 / 2 = ...</p>
+        <div class="pilgan">
+        <form>
+			<input type="radio" name="n10" onclick="benar10()">
+			<label for="A10">A. 4,1</label><br>
+			<input type="radio" name="n10">
+			<label for="B10">B. 4,2</label><br>
+			<input type="radio" name="n10">
+			<label for="C10">C. 5,167</label><br>
+			<input type="radio" name="n10">
+			<label for="D10">D. 84,75</label><br>
+		</form>
+        </div>
+		<center><p id="submit">Submit</p></center>
+		<center><a href="HOME.html"><p class="kembali">Kembali</p></a></center>
+    </div>
+    <div class="footer"></div>
+
+	<div id="kntn" class="mdl" >
+		<div class="konten">
+			<div class="inputkonten">
+				<span style="color:#FFB200;"><h3>REGISTER</h3></span>
+				<form>
+					<label for="username"></label><br>
+					<input type="text" id="username" placeholder="Nama Lengkap"><br>
+					<label for="nomor"></label><br>
+					<input type="text" id="sekolah" placeholder="Asal Selolah"><br>
+					<center><input type="button" value="Register" name="submit" id="tuombol" class="button"></center>
+				</form>
+				<center><a href="HOME.html"><p class="kembali">Kembali</p></a></center>
+			</div>
+		</div>
+	</div>
+
+	<div id="kntn_hasil" class="mdl_hasil">
+		<div class="konten_hasil">
+			<div class="inputkonten_hasil">
+				<span style="color:#FFB200;"><h3>SKOR ANDA</h3></span>
+				<span style="color:#FFB200;"><h3 id="nilai_hasil"></h3></span>
+				<center><a href="HOME.html"><p class="kembali">Kembali</p></a></center>
+			</div>
+		</div>
+	</div>
+
+<script>
+	var soal = [];
+
+	function benar1(){
+		soal.push(1);
+	}
+	function benar2(){
+		soal.push(2);
+	}
+	function benar3(){
+		soal.push(3);
+	}
+	function benar4(){
+		soal.push(4);
+	}
+	function benar5(){
+		soal.push(5);
+	}
+	function benar6(){
+		soal.push(6);
+	}
+	function benar6(){
+		soal.push(6);
+	}
+	function benar7(){
+		soal.push(7);
+	}
+	function benar8(){
+		soal.push(8);
+	}
+	function benar9(){
+		soal.push(9);
+	}
+	function benar10(){
+		soal.push(10);
+	}
+	
+</script>
+<script type="module">
+	var addskor = document.getElementById("kntn");
+	var btn1 = document.getElementById("button");
+
+	window.onload = function () {
+		addskor.style.display = "block";
+	};
+	var back = document.getElementById("tuombol");
+	back.onclick = () => {
+		addskor.style.display = "none";
+	};
+  // Import the functions you need from the SDKs you need
+  	import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+  	import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
+	import { getDatabase, ref, set, push, get, child, onValue, update, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  	const firebaseConfig = {
+    	apiKey: "AIzaSyDyK-ojqUQJzN6pe_Js00cfO6yaptF7msQ",
+    	authDomain: "pembelajaran-mtk.firebaseapp.com",
+    	databaseURL: "https://pembelajaran-mtk-default-rtdb.firebaseio.com",
+    	projectId: "pembelajaran-mtk",
+    	storageBucket: "pembelajaran-mtk.appspot.com",
+    	messagingSenderId: "1035550480834",
+    	appId: "1:1035550480834:web:6e5591b3957a9a8b1c5e5b",
+    	measurementId: "G-8K39TP3RVW"
+  	};
+
+  // Initialize Firebase
+  	const app = initializeApp(firebaseConfig);
+  	const database = getDatabase();
+
+	let uname = document.getElementById("username");
+	let sklh = document.getElementById("sekolah");
+
+	function dorong(){
+		set(ref(database, "EVALUASI_B/" + uname.value), { 
+				asal_sekolah: sklh.value,
+				nilai: 0
+		})
+	}
+	document.getElementById("tuombol").addEventListener("click", dorong, true)
+
+	function dorongnilai(nilai_siswa) {  
+		update(ref(database, "EVALUASI_B/" + uname.value), { 
+			nilai: nilai_siswa,
+		})
+    }
+	function hitung(){
+		var nilai_siswa=10*(soal.length);
+		console.log(nilai_siswa);
+		dorongnilai(nilai_siswa)
+
+		document.getElementById('nilai_hasil').innerHTML=nilai_siswa;
+		var addskor_hasil=document.getElementById("kntn_hasil");
+		var submit=document.getElementById("submit");
+		submit.onclick = function () {
+			addskor_hasil.style.display = "block";
+		};
+	}
+	document.getElementById("submit").addEventListener('click', hitung, true);
+</script>
+</body>
+</html>
